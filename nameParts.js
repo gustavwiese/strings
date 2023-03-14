@@ -1,21 +1,18 @@
-"use strict"
+"use strict";
 
-const tekst = "Gustav Wiese Pedersen"
+function writeNameParts(fullName) {
+  const firstSpace = fullName.indexOf(" ");
 
-let slut = tekst.length;
+  const lastSpace = fullName.lastIndexOf(" ");
 
-const firstSpace = tekst.indexOf(" ");
+  const myMiddleName = fullName.substring(firstSpace + 1, lastSpace);
 
-const lastSpace = tekst.lastIndexOf(" ");
+  const myFirstName = fullName.substring(0, firstSpace);
 
-const myMiddleName = tekst.substring(firstSpace + 1, lastSpace);
+  const myLastName = fullName.substring(lastSpace + 1);
+  console.log(`First name: ${myFirstName} 
+Middle name: ${myMiddleName} 
+Last name: ${myLastName}`);
+}
 
-const myFirstName = tekst.substring(0, firstSpace);
-
-const myLastName = tekst.substring(lastSpace + 1);
-
-console.log(`#${myFirstName}#`);
-console.log(`#${myMiddleName}#`);
-console.log(`#${myLastName}#`);
-
-
+writeNameParts("Gustav Wiese Pedersen");
