@@ -1,7 +1,7 @@
 "use strict";
 
-
 function greeting(firstName) {
-    console.log(result);
+  const result = greeting("Gustav");
+  console.log(result);
 }
-const result = greeting("Gustav");
+greeting();

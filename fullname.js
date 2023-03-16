@@ -1,10 +1,19 @@
 "use strict";
 
-function writeFullName(lastName, firstName, middleName) {
+//function writeFullName(lastName, firstName, middleName) {
+//  if (middleName) {
+//    console.log("My name is " + firstName + " " + middleName + " " + lastName);
+//  } else {
+//    console.log("My name is " + firstName + " " + lastName);
+//  }
+//}
+//writeFullName("Lind", "Peter");
+
+function getFullName(lastName, firstName, middleName) {
   if (middleName) {
-    console.log("My name is " + firstName + " " + middleName + " " + lastName);
+    return "My name is " + firstName + " " + middleName + " " + lastName;
   } else {
-    console.log("My name is " + firstName + " " + lastName);
+    return "My name is " + firstName + " " + lastName;
   }
 }
-writeFullName("Lind", "Peter");
+console.log(getFullName("Lind", "Peter", "Percival Wulfric Brian"));
