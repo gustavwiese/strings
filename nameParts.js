@@ -5,14 +5,22 @@ function writeNameParts(fullName) {
 
   const lastSpace = fullName.lastIndexOf(" ");
 
-  const myMiddleName = fullName.substring(firstSpace + 1, lastSpace);
+  const middleName = capitalize(fullName.substring(firstSpace + 1, lastSpace));
 
-  const myFirstName = fullName.substring(0, firstSpace);
+  const firstName = capitalize(fullName.substring(0, firstSpace));
 
-  const myLastName = fullName.substring(lastSpace + 1);
-  console.log(`First name: ${myFirstName} 
-Middle name: ${myMiddleName} 
-Last name: ${myLastName}`);
+  const lastName = capitalize(fullName.substring(lastSpace + 1));
+
+  if (middleName === lastSpace) {
+    middleName = undefined;
+  }
+
+  return { firstName, middleName, lastName };
 }
 
-writeNameParts("Gustav Wiese Pedersen");
+function capitalize(name) {
+  return name.at(0).toUpperCase() + name.substring(1).toLowerCase();
+}
+
+const result = writeNameParts("GustAV WIese peDeRsen");
+console.log(result);

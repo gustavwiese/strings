@@ -17,3 +17,4 @@ function getFullName(lastName, firstName, middleName) {
   }
 }
 console.log(getFullName("Lind", "Peter", "Percival Wulfric Brian"));
+

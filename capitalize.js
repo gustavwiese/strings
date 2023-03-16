@@ -15,10 +15,7 @@
 //}
 //writeCapitalized("GuSTAv");
 
-function capitalized(name) {
-  const firstLetterBig = name.substring(0, 1).toLocaleUpperCase();
-  const restSmall = name.substring(1).toLocaleLowerCase();
-  return firstLetterBig + restSmall;
+function capitalize(name) {
+  return name.at(0).toUpperCase() + name.substring(1).toLowerCase();
 }
-console.log(capitalized("gUSTAV"));
-
+console.log(capitalize("gUSTAV"));
